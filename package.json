@@ -1,0 +1,35 @@
+{
+  "name": "webpack-plugin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/webpack-plugin.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack serve",
+    "build": "cross-env NODE_ENV=production webpack --config ./webpack.config.js --progress --color ",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "webpack5需要降低版本如果在vue2中使用vue-loader",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.8.1",
+    "file-loader": "^1.1.4",
+    "html-webpack-plugin": "^5.5.1",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "vue-loader": "^15.10.1",
+    "vue-template-compiler": "^2.7.14",
+    "webpack": "^5.84.1",
+    "webpack-cli": "^5.1.1",
+    "webpack-dev-server": "^4.15.0"
+  },
+  "dependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "vue": "^2.7"
+  }
+}
