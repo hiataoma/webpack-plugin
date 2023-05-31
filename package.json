@@ -5,17 +5,19 @@
   "main": "dist/webpack-plugin.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack serve",
-    "build": "cross-env NODE_ENV=production webpack --config ./webpack.config.js --progress --color ",
+    "build:dev": "cross-env NODE_ENV=production webpack --config ./webpack.pro.js --progress --color ",
+    "build": "cross-env NODE_ENV=production webpack --config ./webpack.pro.js --progress --color ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "webpack5需要降低版本如果在vue2中使用vue-loader",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.0",
     "babel-preset-stage-3": "^6.24.1",
+    "clean-webpack-plugin": "^4.0.0",
     "cross-env": "^7.0.3",
     "css-loader": "^6.8.1",
     "file-loader": "^1.1.4",
