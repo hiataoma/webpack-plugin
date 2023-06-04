@@ -15,6 +15,7 @@ const install = function(vue) {
 };
 
 /* istanbul ignore if */ 
+/* 支持使用标签的方式引入 Vue是全局变量时，自动install */
 if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue);
 }
