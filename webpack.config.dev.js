@@ -1,4 +1,3 @@
-const NODE_ENV = process.env.NODE_ENV;
 var path = require("path");
 function resolve (dir) {
   return path.join(__dirname, dir)
