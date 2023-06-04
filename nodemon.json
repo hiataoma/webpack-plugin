@@ -1,0 +1,22 @@
+{
+    "restartable": "rs",
+    "ignore": [
+      ".git",
+      "node_modules/**/node_modules",
+      "package.json",
+      "nodemon.json",
+      "dist"
+    ],
+    "verbose": true,
+    "execMap": {
+      "js": "node --harmony"
+    },
+    "events": {
+      "restart": "osascript -e ''"
+    },
+    "watch": ["src"],
+    "env": {
+      "NODE_ENV": "development"
+    },
+    "ext": "js,json,css,scss,vue"
+  }

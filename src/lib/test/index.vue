@@ -1,6 +1,6 @@
 <template>
     <div>
-        我创建的第一个组件
+        我创建的第一个组件112121212
     </div>
 </template>
 <script>

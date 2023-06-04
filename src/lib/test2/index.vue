@@ -1,6 +1,6 @@
 <template>
     <div>
-        我创建的第二个组件
+        我创建的第二个组件测试11212
     </div>
 </template>
 <script>

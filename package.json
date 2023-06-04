@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot --config ./webpack.config.js",
     "build": "cross-env NODE_ENV=production webpack --config ./webpack.pro.js --progress --color ",
+    "build:watch": "nodemon --config 'nodemon.json' -x 'npm run build && yalc push --force --private'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
