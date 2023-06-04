@@ -11,7 +11,6 @@ module.exports = {
     app:  './src/example/main.js', //多个组件,
   },
   output: {
-    path: path.resolve(process.cwd(), 'dist'),
     filename: 'webpackPlugin.js',
     library: 'webpackPlugin', // 指定的就是你使用require时的模块名
     libraryTarget: 'umd', // 指定输出格式
