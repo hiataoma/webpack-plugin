@@ -9,14 +9,12 @@ const HtmlWebpackPlugin = require("html-webpack-plugin") // html模版使用
 
 module.exports = {
   entry: {
-    app:  NODE_ENV == 'development' ? './src/index.js' : './src/lib/index.js', //多个组件,
+    app:  NODE_ENV == 'development' ? './src/example/main.js' : './src/lib/index.js', //多个组件,
   },
   output: {
-    path: path.resolve(__dirname, './dist'), //环境不对
-    publicPath: '/dist/',
     // path: path.resolve(process.cwd(), 'dist'),
-    filename: 'webpackPlugin.js',
-    library: 'webpackPlugin', // 指定的就是你使用require时的模块名
+    filename: 'webpack-plugin.js',
+    library: 'webpack-plugin', // 指定的就是你使用require时的模块名
     libraryTarget: 'umd', // 指定输出格式
     umdNamedDefine: true // 会对 UMD 的构建过程中的 AMD 模块进行命名。否则就使用匿名的 define
   },
@@ -110,7 +108,7 @@ module.exports = {
     new VueLoaderPlugin(),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: "webpackPlugin",
+      title: "webpack-plugin",
       filename: "index.html",
       template: path.resolve(__dirname, "./src/example/index.html"),
       meta: {
