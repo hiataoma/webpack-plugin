@@ -14,11 +14,13 @@ const install = function(vue) {
   });
 };
 
-/* istanbul ignore if */
+/* istanbul ignore if */ 
 if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue);
-};
+}
+// 自动引入所有组件
 
+// 如果加入的话就多一个default
 export default {
   install,
   test,
