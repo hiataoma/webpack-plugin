@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/webpackPlugin.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot --config ./webpack.config.dev.js",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot --config ./webpack.config.js",
     "build:dev": "cross-env NODE_ENV=production webpack --config ./webpack.pro.js --progress --color ",
     "build": "cross-env NODE_ENV=production webpack --config ./webpack.config.js --progress --color ",
     "test": "echo \"Error: no test specified\" && exit 1"

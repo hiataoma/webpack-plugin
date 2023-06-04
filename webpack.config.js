@@ -4,17 +4,14 @@ function resolve (dir) {
   return path.join(__dirname, dir)
 }
 const { VueLoaderPlugin } = require('vue-loader') // webpack5需要降低版本如果在vue2中使用vue-loader
-const { CleanWebpackPlugin } = require("clean-webpack-plugin") // 清除dist文件每次打包的时候
 const HtmlWebpackPlugin = require("html-webpack-plugin") // html模版使用
 
 module.exports = {
   entry: {
-    app:  NODE_ENV == 'development' ? './src/index.js' : './src/lib/index.js', //多个组件,
+    app:  './src/example/main.js', //多个组件,
   },
   output: {
-    path: path.resolve(__dirname, './dist'), //环境不对
-    publicPath: '/dist/',
-    // path: path.resolve(process.cwd(), 'dist'),
+    path: path.resolve(process.cwd(), 'dist'),
     filename: 'webpackPlugin.js',
     library: 'webpackPlugin', // 指定的就是你使用require时的模块名
     libraryTarget: 'umd', // 指定输出格式
@@ -108,7 +105,6 @@ module.exports = {
   },
   plugins: [
     new VueLoaderPlugin(),
-    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: "webpackPlugin",
       filename: "index.html",
@@ -120,30 +116,6 @@ module.exports = {
     })
   ],
   devServer: {
-    // historyApiFallback: true,
-    // noInfo: true
-    // overlay: true //自动调试
     port: 8080
   }
-}
-
-if (process.env.NODE_ENV === 'production') {
-  // module.exports.devtool = '#source-map'
-  // http://vue-loader.vuejs.org/en/workflow/production.html
-  module.exports.plugins = (module.exports.plugins || []).concat([
-    // new webpack.DefinePlugin({
-    //   'process.env': {
-    //     NODE_ENV: '"production"'
-    //   }
-    // }),
-    // new webpack.optimize.UglifyJsPlugin({
-    //   sourceMap: true,
-    //   compress: {
-    //     warnings: false
-    //   }
-    // }),
-    // new webpack.LoaderOptionsPlugin({
-    //   minimize: true
-    // })
-  ])
 }
